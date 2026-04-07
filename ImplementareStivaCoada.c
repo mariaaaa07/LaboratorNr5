@@ -5,7 +5,7 @@
 
 int stack[MAX];
 int top = -1;
-
+int valoare = peek();
 bool isFull() {
     return top == MAX - 1;
 }
@@ -37,12 +37,14 @@ int peek() {
     return stack[top];
 }
 
+
+
 int main() {
     printf("--- Demo Stivă ---\n");
     push(10);
     push(20);
     push(30);
-    
+    push(200);
     printf("Elementul din vârf (peek): %d\n", peek());
     printf("Am scos (pop): %d\n", pop());
     printf("Stiva este goală? %s\n", isEmpty() ? "Da" : "Nu");
