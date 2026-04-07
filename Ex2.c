@@ -3,13 +3,11 @@
 #define MAX 10
 
 int vector[MAX];
-int top1 = -1;         // Capătul pentru Stiva 1 (stânga)
-int top2 = MAX;        // Capătul pentru Stiva 2 (dreapta)
+int top1 = -1;        
+int top2 = MAX;      
 
-// --- OPERAȚII PENTRU STIVA 1 ---
 
 void push1(int valoare) {
-    // Verificăm dacă mai e loc între ele
     if (top1 < top2 - 1) {
         top1++;
         vector[top1] = valoare;
@@ -30,10 +28,8 @@ int pop1() {
     }
 }
 
-// --- OPERAȚII PENTRU STIVA 2 ---
 
 void push2(int valoare) {
-    // Verificăm dacă mai e loc între ele
     if (top1 < top2 - 1) {
         top2--;
         vector[top2] = valoare;
@@ -54,7 +50,6 @@ int pop2() {
     }
 }
 
-// --- TESTARE ---
 
 int main() {
     printf("--- Umplem Stivele ---\n");
@@ -62,7 +57,7 @@ int main() {
     push1(20);
     push2(100);
     push2(200);
-    push1(30); // Acum avem 3 elemente în Stiva 1 și 2 în Stiva 2
+    push1(30); 
 
     printf("\n--- Golim Stivele ---\n");
     printf("Pop din Stiva 1: %d\n", pop1());
